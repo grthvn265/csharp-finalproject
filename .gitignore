@@ -1,0 +1,24 @@
+## Visual Studio
+.vs/
+.vs1/
+
+## Build results
+[Bb]in/
+[Oo]bj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## NuGet
+packages/
+*.nupkg
+
+## OS
+[Dd]esktop.ini
+Thumbs.db
+
+## Logs
+*.log
