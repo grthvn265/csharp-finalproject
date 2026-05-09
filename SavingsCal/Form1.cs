@@ -19,6 +19,7 @@ namespace SavingsCal
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            errorProvider.Clear();
             textCurrentSavings.Clear();
             textTargetGoal.Clear();
             textMonthlyDeposit.Clear();
