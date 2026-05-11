@@ -27,6 +27,7 @@ namespace SavingsCal
             textLoanRate.Clear();
             textLoanTerm.Clear();
             labelResult.Text = "Result";
+            InitializeScheduleGrid();
             BindSchedule(new List<SavingsScheduleEntry>());
         }
 
@@ -42,6 +43,7 @@ namespace SavingsCal
         {
             errorProvider.Clear();
             labelResult.Text = "";
+            InitializeScheduleGrid();
             BindSchedule(new List<SavingsScheduleEntry>());
             bool hasErrors = false;
 
@@ -140,12 +142,12 @@ namespace SavingsCal
 
         private void InitializeScheduleGrid()
         {
+            gridSchedule.DataSource = null;
             gridSchedule.AutoGenerateColumns = false;
             gridSchedule.Columns.Clear();
             gridSchedule.Columns.Add(CreateTextColumn("Month", "Month", DataGridViewContentAlignment.MiddleRight));
             gridSchedule.Columns.Add(CreateTextColumn("StartingBalance", "Starting Balance", DataGridViewContentAlignment.MiddleRight));
             gridSchedule.Columns.Add(CreateTextColumn("Deposit", "Deposit", DataGridViewContentAlignment.MiddleRight));
-            gridSchedule.Columns.Add(CreateTextColumn("Interest", "Interest", DataGridViewContentAlignment.MiddleRight));
             gridSchedule.Columns.Add(CreateTextColumn("EndingBalance", "Ending Balance", DataGridViewContentAlignment.MiddleRight));
         }
 
@@ -168,14 +170,12 @@ namespace SavingsCal
             {
                 var startingBalance = balance;
                 balance += monthlyDeposit;
-                var interest = 0m;
 
                 schedule.Add(new SavingsScheduleEntry
                 {
                     Month = schedule.Count + 1,
                     StartingBalance = FormatCurrency(startingBalance),
                     Deposit = FormatCurrency(monthlyDeposit),
-                    Interest = FormatCurrency(interest),
                     EndingBalance = FormatCurrency(balance)
                 });
             }
@@ -215,7 +215,6 @@ namespace SavingsCal
             public int Month { get; set; }
             public string StartingBalance { get; set; }
             public string Deposit { get; set; }
-            public string Interest { get; set; }
             public string EndingBalance { get; set; }
         }
 
