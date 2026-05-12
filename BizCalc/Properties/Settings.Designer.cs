@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SavingsCal.Properties
+namespace BizCalc.Properties
 {
 
 

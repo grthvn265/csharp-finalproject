@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace SavingsCal
+namespace BizCalc
 {
     public partial class Form1 : Form
     {

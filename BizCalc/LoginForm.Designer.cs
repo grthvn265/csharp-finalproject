@@ -1,4 +1,4 @@
-namespace SavingsCal
+namespace BizCalc
 {
     partial class LoginForm
     {

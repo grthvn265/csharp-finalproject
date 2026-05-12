@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C557271E-70FD-4E32-BCB3-72DDC86D6AAE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SavingsCal</RootNamespace>
-    <AssemblyName>SavingsCal</AssemblyName>
+    <RootNamespace>BizCalc</RootNamespace>
+    <AssemblyName>BizCalc</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
