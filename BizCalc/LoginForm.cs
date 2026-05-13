@@ -27,7 +27,7 @@ namespace BizCalc
             attempts++;
             if (string.Equals(textPassword.Text, CorrectPassword, StringComparison.Ordinal))
             {
-                UpdateFeedback("Access granted. Preparing dashboard...", Color.ForestGreen);
+                UpdateFeedback("Loading...", Color.ForestGreen);
                 StartLoadingAnimation();
                 return;
             }
