@@ -97,6 +97,7 @@ namespace BizCalc
         {
             errorProvider.Clear();
             const int maxTermMonths = 600;
+            const decimal maxInterestRatePercent = 100m;
             bool hasErrors = false;
 
             if (!decimal.TryParse(textLoanPrincipal.Text, out var loanPrincipal) || loanPrincipal <= 0)
@@ -105,9 +106,9 @@ namespace BizCalc
                 hasErrors = true;
             }
 
-            if (!decimal.TryParse(textLoanRate.Text, out var loanRate) || loanRate < 0)
+            if (!decimal.TryParse(textLoanRate.Text, out var loanRate) || loanRate < 0 || loanRate > maxInterestRatePercent)
             {
-                errorProvider.SetError(textLoanRate, "Enter a valid non-negative interest rate.");
+                errorProvider.SetError(textLoanRate, $"Enter an interest rate between 0 and {maxInterestRatePercent}.");
                 hasErrors = true;
             }
 
