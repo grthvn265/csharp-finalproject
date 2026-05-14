@@ -98,11 +98,12 @@ namespace BizCalc
             errorProvider.Clear();
             const int maxTermMonths = 600;
             const decimal maxInterestRatePercent = 100m;
+            const decimal maxLoanPrincipal = 1000000000m;
             bool hasErrors = false;
 
-            if (!decimal.TryParse(textLoanPrincipal.Text, out var loanPrincipal) || loanPrincipal <= 0)
+            if (!decimal.TryParse(textLoanPrincipal.Text, out var loanPrincipal) || loanPrincipal <= 0 || loanPrincipal > maxLoanPrincipal)
             {
-                errorProvider.SetError(textLoanPrincipal, "Enter a valid loan principal greater than zero.");
+                errorProvider.SetError(textLoanPrincipal, $"Enter a loan principal between 0 and {maxLoanPrincipal.ToString("N0", PhilippineCulture)}.");
                 hasErrors = true;
             }
 
