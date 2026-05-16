@@ -45,7 +45,7 @@ namespace BizCalc
             var builder = new StringBuilder();
             builder.AppendLine("CC103");
             builder.AppendLine("Programmed By: Meneses, Gabriel Benedict K.");
-            builder.AppendLine("Date of Submission: null");
+            builder.AppendLine("Date of Submission: 5/16/2026");
             builder.AppendLine("Message to Your Professor: Thank you, Mam Lizel, for your guidance, patience, and support throughout this course.");
             builder.AppendLine($"Local Date and Time: {localNow.ToString("F", PhilippineCulture)}");
             return builder.ToString();
